@@ -1,0 +1,26 @@
+# Secrets and local environments
+.env
+**/.env
+.env.*
+!**/.env.example
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+# Personally identifying records and uploads
+uploads/
+**/uploads/
+private_storage/
+**/private_storage/
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+# Don't publish SQL exports containing real data
+*datos*.sql
+*backup*.sql
+.DS_Store
+.vscode/
+.idea/

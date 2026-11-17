@@ -1,0 +1,35 @@
+/* V3 · Evaluación reglamentaria y documentos desbloqueables */
+.workflow-entry{display:grid;gap:21px}
+.workflow-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.workflow-heading h3{font-size:19px;margin:5px 0 0;color:#0e2142}
+.workflow-steps{display:flex;flex-wrap:wrap;gap:8px;margin:5px 0;align-items:stretch}
+.workflow-step{display:flex;align-items:center;gap:9px;flex:1 1 128px;min-width:100px;padding:11px;background:#f7f9fc;border:1px solid #e0e7ef;border-radius:11px;color:#74839a;font-size:11px;font-weight:750}
+.workflow-number{width:26px;height:26px;min-width:26px;display:grid;place-items:center;border-radius:50%;background:#e9edf4;color:#64748b;font-weight:900}
+.workflow-step.done{background:#edfdf6;border-color:#c7f2dc;color:#136949}.workflow-step.done .workflow-number{background:#16a36b;color:white}
+.workflow-step.current{background:#edf6ff;border-color:#a7d0fa;color:#075fbe}.workflow-step.current .workflow-number{background:#0877e8;color:white}
+.workflow-warning{padding:15px 19px;border-radius:12px;background:#fff8e7;border:1px solid #f5d38f;color:#805100}
+.workflow-warning strong{font-size:13px}.workflow-warning p{font-size:12px;line-height:1.6;margin:8px 0 0}
+.workflow-warning.expired{background:#fff2f2;border-color:#ffc4c4;color:#a22c2c}
+.workflow-comment{border-left:3px solid currentColor;padding:8px 12px;background:rgba(255,255,255,.65);white-space:pre-wrap}
+.workflow-section{border-top:1px solid #edf0f5;padding-top:18px}
+.workflow-section .section-title{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.workflow-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0 0}
+.workflow-actions .btn{min-height:38px;white-space:normal;text-align:center}
+.workflow-files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:13px}
+.workflow-file{display:flex;align-items:center;gap:11px;padding:11px;border:1px solid #dfebf7;border-radius:11px;background:#f9fcff;min-width:0}
+.workflow-file-icon{flex:0 0 32px;width:32px;height:32px;display:grid;place-items:center;background:#e5f2ff;color:#1372cf;border-radius:9px;font-size:16px}
+.workflow-file>div{min-width:0;flex:1}.workflow-file strong{display:block;font-size:11px;line-height:1.4;color:#1c3350;overflow-wrap:anywhere}.workflow-file small{display:block;font-size:10px;color:#77869b;line-height:1.35;margin-top:4px}
+.workflow-file.unavailable{background:#fafbfc;border-color:#edf0f4}.workflow-file.unavailable .workflow-file-icon{background:#eceff2;color:#9ca3af}
+.workflow-file.unavailable strong{color:#8491a1}.workflow-file .btn:disabled{opacity:.6;cursor:not-allowed}
+.workflow-observations h3{margin:0 0 12px}
+.workflow-note{border:1px solid #f2dbaf;background:#fffaf0;border-radius:10px;padding:13px 15px;margin-bottom:11px}
+.workflow-note-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px;color:#744c05;font-size:12px}
+.workflow-note-head small{font-weight:500;color:#956b27}.workflow-note p{font-size:12px;line-height:1.6;margin:7px 0 0;white-space:pre-wrap}
+.workflow-subnote{background:#fff;border-left:3px solid #dfaa44;padding:5px 8px}
+.review-subheading{margin:19px 0 14px}
+.workflow-criterion{background:#fff;border:1px solid #e2e9f1;border-radius:10px;padding:13px;margin:9px 0}
+.workflow-criterion-header{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;font-size:12px;line-height:1.5}
+.workflow-criterion-header>span{flex:1}.workflow-criterion-header .criterion-choice{max-width:163px}
+.workflow-criterion .criterion-note{margin-top:10px;width:100%;min-height:64px}
+.modal-panel:has(.workflow-entry),.modal-panel:has(#rsu-review-form){width:min(1080px,95vw)}
+@media(max-width:800px){.workflow-files{grid-template-columns:1fr}.workflow-step{flex-basis:41%}.workflow-heading{display:block}.workflow-criterion-header{flex-direction:column}.workflow-criterion-header .criterion-choice{max-width:100%;width:100%}}

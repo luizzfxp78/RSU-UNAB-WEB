@@ -1,0 +1,40 @@
+VERIFICACIÓN RSU V49
+====================
+
+Pruebas realizadas en el entorno de preparación:
+
+1. Compilación estática completa
+   - python -m compileall del directorio app del servidor: CORRECTO.
+   - python -m compileall del directorio src de la interfaz: CORRECTO.
+
+2. PDF oficial del Anexo 5
+   - Se generó un Anexo 5 desde la plantilla DOCX oficial.
+   - Se adjuntaron dos fotografías como páginas finales.
+   - Resultado verificado: 3 páginas (formato oficial + 2 evidencias).
+
+3. Certificado individual
+   - Se rellenó el Anexo 14 oficial con nombre, identificación, proyecto,
+     línea de acción, horas, programa académico y firma.
+   - Conversión DOCX a PDF con LibreOffice: CORRECTA.
+
+4. Memorándum de certificación
+   - Se utilizó exactamente la plantilla Memorandum_087-2026_UNAB.docx
+     suministrada por el usuario (SHA-256 coincidente).
+   - Se rellenaron destinatario, asunto, proyecto, cantidad de certificados,
+     fecha, copias y firma de Dirección RSU.
+   - Conversión DOCX a PDF con LibreOffice: CORRECTA.
+
+5. Validaciones estáticas del flujo
+   - Anexos 5 y 6 protegidos en servidor con responsible_only=True.
+   - Evaluación final creada para Anexo 7 con Administración RSU y Director de Facultad.
+   - Cupo administrativo pendiente disponible para cualquier administrador RSU.
+   - Formulario del Anexo 5 oculto después de su presentación.
+   - Facultad y escuela del Anexo 6 obtenidas del responsable.
+   - Certificados guardados mediante rutas relativas y columna compatible de 1024 caracteres.
+   - Memorándum de certificación incluido en el expediente completo.
+
+Limitación de la prueba local:
+- No se ejecutó una prueba integral contra la base MySQL real del usuario.
+- El entorno de preparación no tenía instalada la dependencia bcrypt para iniciar
+  toda la aplicación FastAPI; está declarada en requirements.txt y debe instalarse
+  con pip install -r requirements.txt en el equipo de despliegue.

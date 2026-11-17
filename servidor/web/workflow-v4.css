@@ -1,0 +1,88 @@
+/* v4 · Navegación, lectura-evaluación paralela, colaboradores, firmas y atajos de prueba */
+.modal-nav-line{display:flex;align-items:center;gap:17px;min-width:0}
+.modal-nav-line>div{min-width:0}
+.modal-nav-line h2{overflow-wrap:anywhere}
+.modal-nav-line .btn{flex:0 0 auto}
+.modal-head{gap:16px}
+.workflow-step>span:last-child{display:grid;gap:4px}
+.workflow-step>span:last-child b{font-size:11px;line-height:1.25}
+.workflow-step small{font-size:10px;font-weight:600;color:inherit;opacity:.82}
+.stage-confirmation{background:#eff7ff;border:1px solid #cfe4ff;border-radius:11px;padding:12px 16px;color:#1b5591}
+.stage-confirmation strong{display:block;font-size:12px}
+.stage-confirmation p{font-size:11px;margin:5px 0 0;color:#3f668c;line-height:1.5}
+.review-project-header{background:#f4f8fe;border:1px solid #e1ebfa;border-radius:12px;padding:14px;margin-bottom:16px}
+.review-project-header h3{margin-bottom:12px}
+.review-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:8px}
+.review-summary>div{background:#fff;border:1px solid #e7eef8;border-radius:8px;padding:10px}
+.review-summary small{font-size:10px;color:#617792;display:block;margin-bottom:6px}
+.review-summary strong{color:#163e66;font-size:11px;line-height:1.5;display:block;overflow-wrap:anywhere}
+.workflow-criterion{padding:0;overflow:hidden}
+.workflow-criterion-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(235px,.85fr);gap:0}
+.criterion-evidence{background:#f5f8fd;padding:15px;border-right:1px solid #dde8f6;min-width:0}
+.criterion-evidence>b{display:block;font-size:12px;color:#17395b;line-height:1.6}
+.criterion-evidence>small{display:block;font-size:10px;color:#6883a4;margin:5px 0 8px}
+.evidence-text{font-size:12px;white-space:pre-wrap;word-break:break-word;line-height:1.65;color:#1b3d60;max-height:260px;overflow:auto}
+.evidence-missing{font-size:11px;color:#a45a09;font-weight:650}
+.criterion-decision{padding:15px;display:flex;flex-direction:column;align-items:stretch;gap:7px}
+.criterion-decision .criterion-choice{max-width:none}
+.volunteer-evidence{border:1px solid #dfeafa;border-radius:10px;margin:16px 0}
+.volunteer-evidence .evidence-text{margin-top:10px;max-height:330px}
+.member-list{display:grid;gap:13px;margin-bottom:14px}
+.member-card{background:#f8fbff;border:1px solid #dce8f6;border-radius:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:15px}
+.member-card>.inline-between,.member-card>.member-signature{grid-column:1/-1}
+.member-card .form-field{min-width:0}
+.member-card .field-label{display:block;margin-bottom:6px}
+.member-card .member-person{width:100%;margin-top:7px}
+.member-signature{background:white;border:1px solid #d9e5f3;border-radius:11px;padding:13px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.member-signature .field-label,.member-signature .field-help{width:100%;margin:0}
+.signature-canvas{width:100%;height:125px;background:#fff;border:1px dashed #8ba9ca;border-radius:8px;cursor:crosshair;touch-action:none;display:block}
+.member-signature input[type=file]{max-width:100%;flex:1 1 245px}
+.test-box{border:1px dashed #e49c36;background:#fff9ed;border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.test-box p{font-size:11px;color:#79551e;margin:7px 0 0;line-height:1.55}
+.test-box strong{font-size:12px;color:#8b5203}
+.test-box .btn{white-space:normal;text-align:center}
+@media(max-width:850px){.workflow-criterion-grid{grid-template-columns:1fr}.criterion-evidence{border-right:0;border-bottom:1px solid #dde8f6}.member-card{grid-template-columns:1fr}.test-box{flex-direction:column;align-items:flex-start}.modal-nav-line{flex-wrap:wrap}}
+
+/* V5: control de habilitación de informe de avance visible en evaluación inicial. */
+.annex5-control{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #b9d0ea;background:#f2f7fe;border-radius:12px;padding:15px 18px;margin:16px 0;flex-wrap:wrap}
+.annex5-control strong{font-weight:700;color:#173d6a}
+.annex5-control p{color:#47637b;font-size:13px;line-height:1.5;margin:5px 0 0;max-width:580px}
+.annex5-test{background:#fffbf0;border-color:#e9ca83}
+.annex5-control .btn[disabled]{opacity:.5;cursor:not-allowed}
+@media(max-width:690px){.annex5-control{align-items:stretch;flex-direction:column}.annex5-control .btn{width:100%}}
+
+/* V6: cronograma (16 semanas) y reporte de avance (8 semanas). */
+.weekly-editor{display:block;grid-column:1/-1;border:1px solid #d9e6f4;border-radius:13px;padding:18px;background:#f9fbff}
+.weekly-editor-heading{margin-bottom:14px}
+.weekly-editor-heading h3{font-size:16px;color:#163f68;margin:0 0 8px;line-height:1.4}
+.weekly-editor-heading p{margin:0;color:#627a93;line-height:1.55}
+.weekly-editor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.weekly-editor-row{display:flex;flex-direction:column;gap:7px;background:#fff;border:1px solid #e1e9f3;border-radius:10px;padding:11px;min-width:0}
+.weekly-editor-row:focus-within{border-color:#2779ca;box-shadow:0 0 0 2px #dceeff}
+.weekly-editor-label{color:#174874;font-size:12px;font-weight:750}
+.weekly-editor-input{width:100%;box-sizing:border-box;min-height:72px;resize:vertical;line-height:1.45}
+.weekly-editor-footer{margin:12px 0 0!important;line-height:1.5}
+@media(max-width:700px){.weekly-editor{padding:12px}.weekly-editor-grid{grid-template-columns:1fr}}
+
+/* V7: subsanaciones identificadas por inciso y corrección sobre el campo. */
+.rsu-correction-summary{border:1px solid #e7b763;background:#fff9ec;border-radius:12px;padding:18px;margin:15px 0}
+.rsu-correction-summary h3{margin:0 0 8px;color:#895510;font-size:17px}
+.rsu-correction-summary>p{margin:0 0 12px;font-size:13px;color:#6a561e}
+.rsu-correction-summary-item{border-top:1px solid #f0ddb0;padding:11px 0}
+.rsu-correction-summary-item strong{color:#73410a;font-size:13px}
+.rsu-correction-summary-item p{margin:7px 0 10px;line-height:1.5}
+.rsu-correction-field{border:2px solid #db952b!important;background:#fff9ea!important;box-shadow:0 0 0 2px #fff1cb;padding:12px;border-radius:9px}
+.rsu-correction-field-note{border-radius:8px;background:#ffeed0;padding:9px;margin-bottom:10px}
+.rsu-correction-field-note strong{color:#8a460d;font-size:12px}
+.rsu-correction-field-note p{margin:5px 0 0;color:#613e16;font-size:13px;line-height:1.5}
+.rsu-inciso-list{display:grid;gap:10px}
+.rsu-inciso-item{background:#fff9ee;border-left:4px solid #d49029;border-radius:8px;padding:12px}
+.rsu-inciso-item b{font-size:13px;color:#7f4908}
+.rsu-inciso-item p{margin:6px 0;color:#563f20;line-height:1.55}
+.rsu-inciso-item small{color:#806c4a}
+.rsu-observations-history{margin-top:12px;border-top:1px solid #e6e9ef;padding-top:10px}
+.rsu-observations-history summary{cursor:pointer;color:#23578e;font-weight:600}
+.rsu-volunteer-observations{margin-top:14px;padding:12px;border:1px solid #eed6ad;border-radius:10px;background:#fffaf2}
+.rsu-volunteer-inciso-row{display:grid;grid-template-columns:minmax(150px,1fr) 2fr auto;gap:8px;align-items:start;margin-bottom:8px}
+.rsu-volunteer-inciso-row textarea{resize:vertical;min-height:60px}
+@media(max-width:700px){.rsu-volunteer-inciso-row{grid-template-columns:1fr}}

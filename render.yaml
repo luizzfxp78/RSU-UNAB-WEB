@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: rsu-unab-demo
+    runtime: python
+    plan: free
+    rootDir: servidor
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: RSU_ENABLE_TEST_ADVANCE
+        value: "false"
+      - key: DEMO_ALLOW_PLACEHOLDER_PASSWORDS
+        value: "false"
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DB_SSL_CA
+        value: ""
